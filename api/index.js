@@ -230,7 +230,7 @@ api.all('*', function (req, res) {
   res.status(404).end();
 });
 
-port = (3000);
+port = Number(process.env.PORT || 3000);
 
 api.listen(port, function() {
   console.log('Server listening on port ' + port);
